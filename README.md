@@ -43,5 +43,6 @@ The calendar program should allow the user to edit the date, so that they can ad
 ### Constructing And Implementing My Code
 ### Algorithms
 ### Coding Standards
+The python coding standards used for this project can be found [here](https://www.python.org/dev/peps/pep-0008/#code-lay-out).
 ## Research
 ## Project management
