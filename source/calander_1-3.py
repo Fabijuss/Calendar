@@ -2,7 +2,6 @@
 # Version 1.3
 # By Fabijus Sobolevas
 
-#Imports required libraries
 import time
 import calendar
 import datetime
@@ -10,7 +9,7 @@ import datetime
 #Sets the local date in now variable
 now = datetime.datetime.now()
 
-#finds local time and formats it
+#Finds local time and outputs it
 localtime = time.asctime(time.localtime(time.time()))
 print "Current date and time:", localtime
 
@@ -31,7 +30,7 @@ print("""
 
 dateOption = raw_input()
 
-#while loop so user can only enter 2 options
+#While loop so user can only enter 2 options.
 while dateOption != "y" and dateOption != "n":
         print("Invalid choice, try again.")
         dateOption = raw_input()
@@ -42,19 +41,19 @@ if dateOption == "y":
     day = now.day
     
 def yearOption():
-    global year #makes the variable global, so that it can be changed later
+    global year  #Allows date to be changed later
     year = raw_input("Enter year (xxxx): \n")
-    while int(year) > 3000 or int(year) < 1: #limits the date so that a large number can't be entered
+    while int(year) > 3000 or int(year) < 1:  #Limits the date to avoid invalid inputs.
                 print("Invalid choice, try again.")
                 year = raw_input("Enter year (xxxx): \n")      
     while True:
             try:
-                float(year) #checks if input is integer
+                float(year)
             except ValueError:
                 print("Invalid choice, try again.")
-                year = raw_input("Enter year (xxxx): \n") #if not integer, ask for another input
+                year = raw_input("Enter year (xxxx): \n")  #Ensures number entered is integer only.
             else:
-                break #if input is integer, breaks loop        
+                break      
 
 def monthOption():
     global month
@@ -145,8 +144,8 @@ def calendarProgram():
         print(contents)
         openCalander.close()
         openCalander = open("calander.txt","a+")
-        input = raw_input("Enter calander entry\n")
-        openCalander.write('\n' + str(year) + '/' + str(month) + '/' + str(day) + ' ' + str(input))
+        entry = raw_input("Enter calander entry\n")
+        openCalander.write('\n' + str(year) + '/' + str(month) + '/' + str(day) + ' ' + str(entry))
         openCalander.close()
 
     if calanderOption == "x":
@@ -179,8 +178,8 @@ def calendarProgram():
                 contents = openCalander.read()
                 print("Printing Calander...\n")
                 print(contents)
-                input = raw_input("Enter calander entry\n")
-                openCalander.write(str(year) + '/' + str(month) + '/' + str(day) + ' ' + str(input))
+                entry = raw_input("Enter calander entry\n")
+                openCalander.write(str(year) + '/' + str(month) + '/' + str(day) + ' ' + str(entry))
                 openCalander.close()
 
             if confirm == "n":
