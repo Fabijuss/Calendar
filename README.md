@@ -24,7 +24,7 @@ V. [Project management](#V-project-management)
   A command-line based program which allows you to read, write or edit entries into a text-based calendar.
  ### User Stories   
  #### Display
-The calendar program should display the contents of the calendar in a readable format; the date should be formatted in an xx/xx/xxxx format; the contents of the entry should be spaced appropriately, so that the contents can be read clearly.
+The calendar program should display the contents of the calendar in a readable format; the date should be formatted in an xxxx/xx/xx format; the contents of the entry should be spaced appropriately, so that the contents can be read clearly.
 #### Write
 The calendar program should be able to write entries into a text file; the entries should include the date in a readable format and the entry next to it.
 #### Edit
